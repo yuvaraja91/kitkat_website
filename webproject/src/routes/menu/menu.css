@@ -1,0 +1,108 @@
+.bioimg{
+    margin-top: 20px;
+    width: 100%;
+    
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+    margin: 20px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
+p{
+    margin: 10px;
+    text-indent: 20px;
+    line-height: 25px;
+    font-size: 17px;
+}
+
+.erpimg1{
+    width: 500px;
+    height: 500px;
+
+}
+.divleft{
+    width: 150px;
+    height: 150px;
+}
+
+.divright{
+    margin-top: -100px;
+    margin-left: 550px;
+    text-align: justify;
+    padding: 20px;
+    border: 1px solid rgb(233, 26, 26);
+    border-radius: 20px;
+    /* width: 150px;
+    height: 150px; */
+}
+
+.divleft1{
+    /* margin-top: -50px; */
+    margin-right: 550px;
+    text-align: justify;
+    padding: 20px;
+    border: 1px solid rgb(233, 213, 38);
+    border-radius: 20px;
+    margin-bottom: 300px;
+    /* width: 150px;
+    height: 150px; */
+}
+.divright1{
+    /* width: 100px;
+    height: 100px; */
+    margin-left: 700px;
+    margin-top: -800px;
+    
+}
+.erpimg2{
+    width: 400px;
+    height: 250px;
+}
+.erpimg3{
+    margin-top: -500px;
+    width: 500px;
+    height: 350px;
+}
+.divright2{
+    margin-top: 20px;
+    margin-left: 550px;
+    text-align: justify;
+    padding: 20px;
+    border: 1px solid rgb(23, 184, 233);
+    border-radius: 20px;
+    /* width: 150px;
+    height: 150px; */
+}
+.divsub{
+    /* margin: 10px; */
+    font-size: 15px;
+}
+h3{
+    margin: 10px;
+}
+
+.listdesign{
+    padding-left: 20px;
+    line-height: 30px;
+    /* list-style:square; */
+}
+.poslist{
+    width:800px;
+    margin-left: 150px;
+    justify-content: center;
+    text-align: justify;
+    border: 1px solid blue;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bodyimg{
+    margin-left: 300px;
+    width: 40%;
+    /* height: 250px; */
+}
