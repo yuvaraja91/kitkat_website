@@ -71,7 +71,7 @@ console.log("db connected");
 
 
 .catch(()=>{
-  console.log("db i not connected");
+  console.log("db is not connected");
 
 })
 
@@ -84,16 +84,25 @@ app.get("/home",(req,res)=>{
 
 app.post("/create",async(req,res)=>{
 
-   const data = new dataschema({
-      name:req.body.name,
-      email:req.body.email,
-      phone:req.body.phone,
-   })
+    const Name = req.body.name
+    const Email = req.body.email
+    const Phone = req.body.phone
 
+    console.log(Name,Email,Phone);
+    const FormData = new dataschema({
+        name: Name,
+        email: Email,
+        phone: Phone
+    })
+
+  
       try{
-      const datas =await data.save();
+      const datas =await FormData.save();
       res.json(datas);
-      res.send("Data Inserted")
+      // res.sendFile('http://localhost:3000');
+      // res.send("Data Inserted");
+      // res.status().send(200);
+      // res.redirect('http://localhost:3000');
     }
         catch(err){
             console.log(err);
@@ -103,10 +112,11 @@ app.post("/create",async(req,res)=>{
 
 })
 
-// app.get("/view", async(req,res) =>{
+app.get("/view", async(req,res) =>{
 
-//   const finddata=await 
-// })
+  const finddata=await dataschema.find();
+  res.json(finddata) 
+})
 
     app.listen(4000,()=>{
 console.log("server is running port:4000");

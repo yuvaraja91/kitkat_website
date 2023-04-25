@@ -20,24 +20,45 @@ const Contact = () => {
 
         const handleSubmit = (e) => {
           e.preventDefault();
+          
+          console.log(name);
+          console.log(email);
+          console.log(phone);
 
+          
           Axios.post('http://localhost:4000/create',{
-              fullName: name,
-              fEmail: email,
-              fPhone: phone
+          
+              // Name: name,
+              // Phone: phone,
+              // Email: email
+              name,
+              email,
+              phone
               
+                    
         })
+        
+
           .then((res)=>{
             setName(res.data.name);
             setPhone(res.data.phone);
-            setPhone(res.data.email);
+            setEmail(res.data.email);
             console.log(res.data.name);
           })
 
+          // const onClear = () =>{
+            setName("");
+            setEmail("");
+            setPhone("");
+  
+          // };
+
         }
+        
+        
 
         return(
-          <div className="">
+          <div class="">
               <header class="App-header">
                 <div class="logIn">
                   <form onSubmit={handleSubmit}>
@@ -45,18 +66,17 @@ const Contact = () => {
                       
                       type="text"
                       placeholder="Please Enter Name"
-                      onChange={(e) => {setName(e.target.value)}}
-                    /></p>
+                      onChange={(e) => {setName(e.target.value)}}/></p>
                     
                     <p class="form">Ph No:   <input
-                      className=""
+                      class=""
                       type="text"
                       placeholder="Please Enter Number"
                       onChange={(e) => {setPhone(e.target.value)}}
                     /></p>
                     
                     <p class="form">Email:   <input
-                      className=""
+                      class=""
                       type="text"
                       placeholder="Please Enter Email"
                       onChange={(e) => {setEmail(e.target.value)}}
