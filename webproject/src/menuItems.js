@@ -114,5 +114,9 @@ export const menuItems = [
         title: 'Contact',
         url: '/contact',
     },
+    {
+      title: 'Login',
+      url: '/login',
+    }
   ];
   

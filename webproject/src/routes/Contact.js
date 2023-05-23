@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './style.css';
 import Axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
 
 const Contact = () => {
     return (
@@ -18,9 +20,14 @@ const Contact = () => {
         const [phone, setPhone] =  useState("")
         const [email, setEmail] = useState("")
 
+        const navigate = useNavigate();
+
         const handleSubmit = (e) => {
           e.preventDefault();
           
+          
+
+
           console.log(name);
           console.log(email);
           console.log(phone);
@@ -28,9 +35,6 @@ const Contact = () => {
           
           Axios.post('http://localhost:4000/create',{
           
-              // Name: name,
-              // Phone: phone,
-              // Email: email
               name,
               email,
               phone
@@ -52,6 +56,8 @@ const Contact = () => {
             setPhone("");
   
           // };
+
+            navigate('/');
 
         }
         

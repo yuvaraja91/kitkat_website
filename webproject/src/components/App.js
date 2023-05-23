@@ -27,6 +27,8 @@ import ERP from '../routes/menu/ERP';
 import HRM from '../routes/menu/HRM';
 import Bulksms from '../routes/menu/Bulksms';
 
+import Login from '../routes/Login';
+
 
 const App = () => {
   return (
@@ -59,6 +61,7 @@ const App = () => {
           <Route path="hrm" element={<HRM/>}/>
           <Route path="career" element={<Career/>}/>
           <Route path="contact" element={<Contact/>}/>
+          <Route path="login" element={<Login/>}/>
           <Route path="*" element={<p>Not found!</p>} />
         </Route>
       </Routes>

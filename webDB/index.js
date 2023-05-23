@@ -100,7 +100,7 @@ app.post("/create",async(req,res)=>{
       const datas =await FormData.save();
       res.json(datas);
       // res.sendFile('http://localhost:3000');
-      // res.send("Data Inserted");
+      res.send("Data Inserted");
       // res.status().send(200);
       // res.redirect('http://localhost:3000');
     }
